@@ -100,7 +100,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--output-root",
         type=Path,
         default=PACKAGE_OUTPUT_ROOT,
-        help="Root directory used for checkpoints, logs, and reports. Defaults to brainprintnet/outputs.",
+        help="Root directory used for checkpoints, logs, and reports. Defaults to src/outputs.",
     )
     parser.add_argument(
         "--list-datasets",

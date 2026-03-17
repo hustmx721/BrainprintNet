@@ -1,4 +1,4 @@
-"""Module entry point for ``python -m brainprintnet``."""
+"""Module entry point for ``python -m src``."""
 
 from .cli import main
 
