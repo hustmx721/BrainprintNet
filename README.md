@@ -85,7 +85,7 @@ python -m src --list-models
 python -m src \
   --mode baseline \
   --dataset 001 \
-  --model ResEEGNet \
+  --model BrainprintNet \
   --data-root /path/to/data
 ```
 
@@ -98,21 +98,6 @@ python run.py \
   --model BrainprintNet \
   --session-num 1 \
   --data-root /path/to/data
-```
-
-## Output Directory
-
-默认输出目录位于 `src/outputs/`：
-
-- `src/outputs/logs/`：运行日志
-- `src/outputs/checkpoints/`：模型权重
-- `src/outputs/reports/`：CSV 和 JSON 结果
-- `src/outputs/legacy_artifacts/`：历史输出归档
-
-如需修改输出目录，可显式传入：
-
-```bash
-python -m src --output-root /your/output/path ...
 ```
 
 ## Directory Guide
