@@ -5,16 +5,17 @@
 [Yunlu Tu](https://scholar.google.com/citations?hl=en&user=dtDMET8AAAAJ)<sup>1</sup>, [Siyang Li](https://scholar.google.com/citations?user=5GFZxIkAAAAJ&hl=en)<sup>1</sup>, [Xiaoqing Chen](https://scholar.google.com/citations?hl=en&user=LjfCH7cAAAAJ)<sup>1,2</sup>, and [Dongrui Wu](https://scholar.google.com/citations?user=UYGzCPEAAAAJ&hl=en)<sup>1,2 :email:</sup>
 
 <sup>1</sup> School of Artificial Intelligence and Automation, Huazhong University of Science and Technology
+
 <sup>2</sup> Zhongguancun Academy
 (<sup>:email:</sup>) Corresponding Author
 
 </div>
 
-> This repository contains the implementation of our paper: [**"BrainprintNet: A Multiscale Cross-Band FusionNetwork for EEG-Based Brainprint Recognition"**, serving as a **benchmark codebase**](https://ieeexplore.ieee.org/abstract/document/11424605/).
+> This repository contains the implementation of our paper: [**"BrainprintNet: A Multiscale Cross-Band FusionNetwork for EEG-Based Brainprint Recognition"**](https://ieeexplore.ieee.org/abstract/document/11424605/).
 
 ## Abstract
 ![Backbone](./figures/BrainprintNet.png)
-Abstract—User identification technologies are essential for ensuring security and privacy. Compared to conventional biometric identification methods, electroencephalogram (EEG)-based brainprint recognition provides unique advantages, including non-replicability, resistance to coercion, and inherent liveness detection. However, existing EEG-based brainprint recognition methods are typically tailored for specific tasks and evaluated under conditions that differ substantially from real-world use. To overcome these limitations, we propose BrainprintNet, a convolutional neural network architecture integrating fine-grained filter banks, grouped multiscale temporal convolutions, and cross-band spatial fusion to enhance EEG-based brainprint recognition. BrainprintNet surpasses previous architectures in challenging scenarios involving simultaneous cross-session and cross-task recognition, demonstrating its generalization ability under strict simulation for real-world applications. Comprehensive experiments were conducted using three publicly available datasets encompassing nine distinct tasks. Furthermore, visualization of the learned network weights revealed strong correlations between user identity and specific EEG frequency subbands and channels. The proposed BrainprintNet significantly advances the accuracy, flexibility, and practical applicability of EEG-based brainprint recognition systems.
+User identification technologies are essential for ensuring security and privacy. Compared to conventional biometric identification methods, electroencephalogram (EEG)-based brainprint recognition provides unique advantages, including non-replicability, resistance to coercion, and inherent liveness detection. However, existing EEG-based brainprint recognition methods are typically tailored for specific tasks and evaluated under conditions that differ substantially from real-world use. To overcome these limitations, we propose BrainprintNet, a convolutional neural network architecture integrating fine-grained filter banks, grouped multiscale temporal convolutions, and cross-band spatial fusion to enhance EEG-based brainprint recognition. BrainprintNet surpasses previous architectures in challenging scenarios involving simultaneous cross-session and cross-task recognition, demonstrating its generalization ability under strict simulation for real-world applications. Comprehensive experiments were conducted using three publicly available datasets encompassing nine distinct tasks. Furthermore, visualization of the learned network weights revealed strong correlations between user identity and specific EEG frequency subbands and channels. The proposed BrainprintNet significantly advances the accuracy, flexibility, and practical applicability of EEG-based brainprint recognition systems.
 
 
 ## Project Structure
@@ -126,12 +127,19 @@ python -m src --output-root /your/output/path ...
 - `run.py`：仓库根目录快捷启动脚本
 
 ## Supported Datasets
+- `M3CV`: [paper](https://www.sciencedirect.com/science/article/pii/S105381192200787X) and [dataset](https://www.kaggle.com/competitions/eeg-biometric-competition/data)
+- `OpenBMI`: [paper](https://academic.oup.com/gigascience/article/8/5/giz002/5304369?login=false&guestAccessKey=) and [dataset](https://ftp.cngb.org/pub/gigadb/pub/10.5524/100001_101000/100542/)
+- `LingJiu`: Derived from our previous projects; if you want to use this dataset, please contact [Yunlu Tu](#contact).
 
-`001`, `004`, `BCI85`, `Rest85`, `LJ30`, `Rest`, `MI`, `ERP`, `SSVEP`, `CatERP`, `M3CV_Rest`, `M3CV_Transient`, `M3CV_Steady`, `M3CV_P300`, `M3CV_Motor`, `M3CV_SSVEP_SA`, `SEED`
 
 ## Supported Models
-
-`EEGNet`, `DeepConvNet`, `ShallowConvNet`, `Conformer`, `FBCNet`, `FBMSNet`, `IFNet`, `GWNet`, `ResEEGNet`, `1D_LSTM`, `CNN_LSTM`, `BrainprintNet`, `MSNet`, `CBFNet`
+We implemented the following deep learning models：
+`BrainprintNet`, `MSNet`, `CBFNet`, `EEGNet`, `DeepConvNet`, `ShallowConvNet`, `1D-LSTM`, and we express our gratitude to the authors of the following open-source models:
+- [`Conformer`](https://github.com/eeyhsong/EEG-Conformer)
+- [`FBCNet`](https://github.com/ravikiran-mane/FBCNet)
+- [`FBMSNet`](https://github.com/Want2Vanish/FBMSNet)
+- [`IFNet`](https://github.com/Jiaheng-Wang/IFNet)
+- [`GWNet`](https://www.kaggle.com/code/nischaydnk/hms-submission-1d-eegnet-pipeline-lightning/notebook?scriptVersionId=160814854)
 
 ## Contact
 Please contact me at [yltu@hust.edu.cn](mailto:yltu@hust.edu.cn) or [hust_mx721@163.com](mailto:yltu@hust_mx721@163.com)  for any questions regarding the paper, and use Issues for any questions regarding the code.
@@ -147,7 +155,7 @@ If you find this work helpful, please consider citing our paper:
   year    = {2026},
   pages   = {2757--2768},
   volume  = {21},
-  doi={10.1109/TIFS.2026.3672000}
+  doi     = {10.1109/TIFS.2026.3672000},
 }
 
 ```
